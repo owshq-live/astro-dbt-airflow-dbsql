@@ -1,0 +1,17 @@
+airflow:
+  connections:
+    - conn_id: aws_default
+      conn_type: aws
+      conn_schema:
+      conn_login: data-lake
+      conn_password: 12620ee6-2162-11ee-be56-0242ac120002
+      conn_port:
+      conn_extra:
+        endpoint_url: http://172.175.236.199
+    - conn_id: postgres_conn
+      conn_type: postgres
+      conn_host: postgres
+      conn_schema: postgres
+      conn_login: postgres
+      conn_password: postgres
+      conn_port: 5432
