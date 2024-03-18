@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: default
+    tables:
+      - name: users
+      - name: payments
+      - name: rides

@@ -1,0 +1,9 @@
+default:
+  target: dev
+  outputs:
+    dev:
+      type: databricks
+      schema: default
+      host: adb-2090585310411504.4.azuredatabricks.net
+      http_path: /sql/1.0/warehouses/50a3017f6e0f443a
+      token: dapi299c4aad65fe0d17191455de667f983d-2

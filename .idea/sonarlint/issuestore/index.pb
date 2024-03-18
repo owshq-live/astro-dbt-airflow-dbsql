@@ -19,5 +19,23 @@ E
 Dockerfile,6/6/6651ddff6eb82c840ced7c1dddee15c6e1913dd4
 <
 packages.txt,c/9/c92d1cff5fdc90f19d2be5ebba8f452f2a1e317c
-C
-dags/.airflowignore,4/2/426f70384bbd1686288ca825289d5f95bb48a1fb
+I
+dags/data/users/users.csv,e/9/e992dc902688b71ad24b49fa3cdb88c4d8290be7
+I
+dags/data/rides/rides.csv,8/0/80548581ff6b30cc40d43eb898da1d2410842e58
+R
+"dags/local-files-to-dbsql-delta.py,f/b/fbb08527b8e320dc4d8f0bc5dfeb5f10f59c042c
+P
+ dags/dbt/databricks/profiles.yml,1/0/103c6b5e0ecf259e499969a556ba806021d4d2a6
+S
+#dags/dbt/databricks/dbt_project.yml,5/6/56a7fd5ed4f297a0791833663f9cf5a3d341d341
+V
+&dags/dbt/databricks/models/sources.yml,4/0/401fd4129e184523fd92632cadf2abbdbcc9a261
+`
+0dags/dbt/databricks/models/stage/stage_users.sql,d/0/d0729137d6c352358b57abbb07872daac1233b17
+c
+3dags/dbt/databricks/models/stage/stage_payments.sql,7/0/702950f63f444dc6be5e2b32d536011e28f65724
+`
+0dags/dbt/databricks/models/stage/stage_rides.sql,8/6/8609a6cb3e7649b39570ab51510c21eb419f4e41
+M
+dags/dbt/databricks/readme.md,8/9/89ef7bc74730a4772c4be78d149801c45feb2bc6

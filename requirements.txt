@@ -1,1 +1,1 @@
-
+astro-sdk-python[databricks]==1.8.0

@@ -1,5 +1,9 @@
 # astro-dbt-airflow-dbsql
 
+- [Docker Desktop](https://www.docker.com/products/docker-desktop/)
+- [Astro CLI](https://docs.astronomer.io/astro/cli/install-cli)
+- [Astro Python SDK](https://github.com/astronomer/astro-sdk)
+
 ### 1) Install Docker Desktop
 Install docker desktop to run airflow locally
 ```shell
@@ -21,22 +25,7 @@ astro dev init
 Add these configurations into the airflow_settings.yaml file
 ```yaml
 airflow:
-  connections:
-    - conn_id: aws_default
-      conn_type: aws
-      conn_schema:
-      conn_login: data-lake
-      conn_password: 12620ee6-2162-11ee-be56-0242ac120002
-      conn_port:
-      conn_extra:
-        endpoint_url: http://172.175.236.199
-    - conn_id: postgres_conn
-      conn_type: postgres
-      conn_host: postgres
-      conn_schema: postgres
-      conn_login: postgres
-      conn_password: postgres
-      conn_port: 5432
+  connections: databricks_conn
 ```
 
 ### 4) Init Airflow Project
@@ -44,4 +33,13 @@ Initialize project using the astro-cli
 ```shell
 astro dev start
 http://localhost:8080
+astro dev restart
+```
+
+### 5) Install Libraries for Development
+Install the required libraries for the project to develop the DAGs locally
+```shell
+pip install apache-airflow
+pip install astro-sdk-python
+pip install pip install dbt-databricks
 ```
