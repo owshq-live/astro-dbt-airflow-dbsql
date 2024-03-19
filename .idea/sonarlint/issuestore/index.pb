@@ -39,3 +39,7 @@ c
 0dags/dbt/databricks/models/stage/stage_rides.sql,8/6/8609a6cb3e7649b39570ab51510c21eb419f4e41
 M
 dags/dbt/databricks/readme.md,8/9/89ef7bc74730a4772c4be78d149801c45feb2bc6
+I
+dags/dbt_sql_transform.py,0/6/0606fcf085dbd13f3904cee2be311cfae27a496d
+T
+$dags/dbt-databricks-sql-transform.py,6/c/6c21b0d74a83b4698745156058998a6d0e1757b3

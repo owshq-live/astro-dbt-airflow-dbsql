@@ -41,5 +41,6 @@ Install the required libraries for the project to develop the DAGs locally
 ```shell
 pip install apache-airflow
 pip install astro-sdk-python
-pip install pip install dbt-databricks
+pip install bt-databricks
+pip install astronomer-cosmos
 ```
