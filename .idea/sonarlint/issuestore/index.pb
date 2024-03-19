@@ -43,3 +43,5 @@ I
 dags/dbt_sql_transform.py,0/6/0606fcf085dbd13f3904cee2be311cfae27a496d
 T
 $dags/dbt-databricks-sql-transform.py,6/c/6c21b0d74a83b4698745156058998a6d0e1757b3
+T
+$dags/databricks-dbt-sql-transform.py,c/f/cf1f23f9db183d15594c15949da307bd9a6e729a
