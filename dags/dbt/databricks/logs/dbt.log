@@ -6603,3 +6603,563 @@ GROUP BY country, credit_card_type
 [0m17:35:18.742829 [debug] [MainThread]: Command `cli run` succeeded at 17:35:18.742713 after 11.24 seconds
 [0m17:35:18.743251 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1236c3ed0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x101a87c10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x121cda610>]}
 [0m17:35:18.743586 [debug] [MainThread]: Flushing usage events
+[0m19:47:34.551035 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106f18af0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110d18280>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110d74d60>]}
+
+
+============================== 19:47:34.560385 | e5fcfc99-1c4e-42cf-81b9-363764cf5392 ==============================
+[0m19:47:34.560385 [info ] [MainThread]: Running with dbt=1.7.7
+[0m19:47:34.560791 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'profiles_dir': '/Users/luanmorenomaciel/GitHub/astro-dbt-airflow-dbsql/dags/dbt/databricks', 'log_path': '/Users/luanmorenomaciel/GitHub/astro-dbt-airflow-dbsql/dags/dbt/databricks/logs', 'fail_fast': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'log_format': 'default', 'introspect': 'True', 'target_path': 'None', 'invocation_command': 'dbt run --select trusted_rides_km_real.sql', 'send_anonymous_usage_stats': 'True'}
+[0m19:47:40.902076 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'e5fcfc99-1c4e-42cf-81b9-363764cf5392', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110d09f10>]}
+[0m19:47:40.943842 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'e5fcfc99-1c4e-42cf-81b9-363764cf5392', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110d09ee0>]}
+[0m19:47:40.944167 [info ] [MainThread]: Registered adapter: databricks=1.7.7
+[0m19:47:40.961521 [debug] [MainThread]: checksum: 54188551c516f4dd1c42b8d9c289f2bf49f18ae42632e2ba36a64ad29fd60da4, vars: {}, profile: , target: , version: 1.7.7
+[0m19:47:40.971052 [info ] [MainThread]: Unable to do partial parsing because of a version mismatch
+[0m19:47:40.971265 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'e5fcfc99-1c4e-42cf-81b9-363764cf5392', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1367e7790>]}
+[0m19:47:42.517116 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'e5fcfc99-1c4e-42cf-81b9-363764cf5392', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1370ba0d0>]}
+[0m19:47:42.528581 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'e5fcfc99-1c4e-42cf-81b9-363764cf5392', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1370ba070>]}
+[0m19:47:42.528834 [info ] [MainThread]: Found 7 models, 3 sources, 0 exposures, 0 metrics, 537 macros, 0 groups, 0 semantic models
+[0m19:47:42.529016 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'e5fcfc99-1c4e-42cf-81b9-363764cf5392', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x137d02f70>]}
+[0m19:47:42.529735 [info ] [MainThread]: 
+[0m19:47:42.530160 [debug] [MainThread]: Databricks adapter: conn: 5218054000: Creating DatabricksDBTConnection sess: None, name: master, idle: 0s, acqrelcnt: 0, lang: None, thrd: (68873, 7965269056), cmpt: ``, lut: None
+[0m19:47:42.530308 [debug] [MainThread]: Acquiring new databricks connection 'master'
+[0m19:47:42.530444 [debug] [MainThread]: Databricks adapter: Thread (68873, 7965269056) using default compute resource.
+[0m19:47:42.530596 [debug] [MainThread]: Databricks adapter: conn: 5218054000: _acquire sess: None, name: master, idle: 9.5367431640625e-07s, acqrelcnt: 1, lang: None, thrd: (68873, 7965269056), cmpt: ``, lut: 1710888462.530549
+[0m19:47:42.531130 [debug] [ThreadPool]: Databricks adapter: conn: 4417679808: Creating DatabricksDBTConnection sess: None, name: list_hive_metastore, idle: 0s, acqrelcnt: 0, lang: None, thrd: (68873, 6437613568), cmpt: ``, lut: None
+[0m19:47:42.531337 [debug] [ThreadPool]: Acquiring new databricks connection 'list_hive_metastore'
+[0m19:47:42.531492 [debug] [ThreadPool]: Databricks adapter: Thread (68873, 6437613568) using default compute resource.
+[0m19:47:42.531645 [debug] [ThreadPool]: Databricks adapter: conn: 4417679808: _acquire sess: None, name: list_hive_metastore, idle: 1.1920928955078125e-06s, acqrelcnt: 1, lang: None, thrd: (68873, 6437613568), cmpt: ``, lut: 1710888462.5315998
+[0m19:47:42.531801 [debug] [ThreadPool]: Databricks adapter: conn: 4417679808: get_thread_connection: sess: None, name: list_hive_metastore, idle: 0.00015735626220703125s, acqrelcnt: 1, lang: None, thrd: (68873, 6437613568), cmpt: ``, lut: 1710888462.5315998
+[0m19:47:42.532019 [debug] [ThreadPool]: Databricks adapter: conn: 4417679808: idle check connection: sess: None, name: list_hive_metastore, idle: 0.0003752708435058594s, acqrelcnt: 1, lang: None, thrd: (68873, 6437613568), cmpt: ``, lut: 1710888462.5315998
+[0m19:47:42.532162 [debug] [ThreadPool]: Using databricks connection "list_hive_metastore"
+[0m19:47:42.532311 [debug] [ThreadPool]: On list_hive_metastore: GetSchemas(database=hive_metastore, schema=None)
+[0m19:47:42.532455 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m19:47:43.329998 [debug] [ThreadPool]: Databricks adapter: conn: 4417679808: session opened sess: 01eee642-b27f-1515-9637-b7406fb4f917, name: list_hive_metastore, idle: 1.5735626220703125e-05s, acqrelcnt: 1, lang: None, thrd: (68873, 6437613568), cmpt: ``, lut: 1710888463.32941
+[0m19:47:58.657762 [debug] [ThreadPool]: SQL status: OK in 16.1299991607666 seconds
+[0m19:47:58.665015 [debug] [ThreadPool]: Databricks adapter: conn: 4417679808: _release sess: 01eee642-b27f-1515-9637-b7406fb4f917, name: list_hive_metastore, idle: 8.106231689453125e-06s, acqrelcnt: 0, lang: None, thrd: (68873, 6437613568), cmpt: ``, lut: 1710888478.664839
+[0m19:47:58.668420 [debug] [ThreadPool]: Databricks adapter: conn: 4417679808: idle check connection: sess: 01eee642-b27f-1515-9637-b7406fb4f917, name: list_hive_metastore, idle: 0.0033409595489501953s, acqrelcnt: 0, lang: None, thrd: (68873, 6437613568), cmpt: ``, lut: 1710888478.664839
+[0m19:47:58.669136 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_hive_metastore, now list_hive_metastore_default)
+[0m19:47:58.669604 [debug] [ThreadPool]: Databricks adapter: conn: 4417679808: reusing connection list_hive_metastore sess: 01eee642-b27f-1515-9637-b7406fb4f917, name: list_hive_metastore_default, idle: 0.00465083122253418s, acqrelcnt: 0, lang: None, thrd: (68873, 6437613568), cmpt: ``, lut: 1710888478.664839
+[0m19:47:58.669950 [debug] [ThreadPool]: Databricks adapter: Thread (68873, 6437613568) using default compute resource.
+[0m19:47:58.670296 [debug] [ThreadPool]: Databricks adapter: conn: 4417679808: _acquire sess: 01eee642-b27f-1515-9637-b7406fb4f917, name: list_hive_metastore_default, idle: 0.0053558349609375s, acqrelcnt: 1, lang: None, thrd: (68873, 6437613568), cmpt: ``, lut: 1710888478.664839
+[0m19:47:58.675875 [debug] [ThreadPool]: Databricks adapter: conn: 4417679808: get_thread_connection: sess: 01eee642-b27f-1515-9637-b7406fb4f917, name: list_hive_metastore_default, idle: 0.010931968688964844s, acqrelcnt: 1, lang: None, thrd: (68873, 6437613568), cmpt: ``, lut: 1710888478.664839
+[0m19:47:58.676178 [debug] [ThreadPool]: Databricks adapter: conn: 4417679808: idle check connection: sess: 01eee642-b27f-1515-9637-b7406fb4f917, name: list_hive_metastore_default, idle: 0.01125788688659668s, acqrelcnt: 1, lang: None, thrd: (68873, 6437613568), cmpt: ``, lut: 1710888478.664839
+[0m19:47:58.676420 [debug] [ThreadPool]: Using databricks connection "list_hive_metastore_default"
+[0m19:47:58.676667 [debug] [ThreadPool]: On list_hive_metastore_default: GetTables(database=hive_metastore, schema=default, identifier=None)
+[0m19:47:59.106522 [debug] [ThreadPool]: SQL status: OK in 0.4300000071525574 seconds
+[0m19:47:59.121962 [debug] [ThreadPool]: Databricks adapter: conn: 4417679808: get_thread_connection: sess: 01eee642-b27f-1515-9637-b7406fb4f917, name: list_hive_metastore_default, idle: 0.45694708824157715s, acqrelcnt: 1, lang: None, thrd: (68873, 6437613568), cmpt: ``, lut: 1710888478.664839
+[0m19:47:59.122464 [debug] [ThreadPool]: Databricks adapter: conn: 4417679808: idle check connection: sess: 01eee642-b27f-1515-9637-b7406fb4f917, name: list_hive_metastore_default, idle: 0.4575378894805908s, acqrelcnt: 1, lang: None, thrd: (68873, 6437613568), cmpt: ``, lut: 1710888478.664839
+[0m19:47:59.122751 [debug] [ThreadPool]: Databricks adapter: conn: 4417679808: get_thread_connection: sess: 01eee642-b27f-1515-9637-b7406fb4f917, name: list_hive_metastore_default, idle: 0.45782995223999023s, acqrelcnt: 1, lang: None, thrd: (68873, 6437613568), cmpt: ``, lut: 1710888478.664839
+[0m19:47:59.123022 [debug] [ThreadPool]: Databricks adapter: conn: 4417679808: idle check connection: sess: 01eee642-b27f-1515-9637-b7406fb4f917, name: list_hive_metastore_default, idle: 0.45810604095458984s, acqrelcnt: 1, lang: None, thrd: (68873, 6437613568), cmpt: ``, lut: 1710888478.664839
+[0m19:47:59.123271 [debug] [ThreadPool]: Spark adapter: NotImplemented: add_begin_query
+[0m19:47:59.123502 [debug] [ThreadPool]: Using databricks connection "list_hive_metastore_default"
+[0m19:47:59.123781 [debug] [ThreadPool]: On list_hive_metastore_default: /* {"app": "dbt", "dbt_version": "1.7.7", "dbt_databricks_version": "1.7.7", "databricks_sql_connector_version": "2.9.3", "profile_name": "default", "target_name": "dev", "connection_name": "list_hive_metastore_default"} */
+
+      select current_catalog()
+  
+[0m19:48:00.328134 [debug] [ThreadPool]: SQL status: OK in 1.2000000476837158 seconds
+[0m19:48:00.335346 [debug] [ThreadPool]: Databricks adapter: conn: 4417679808: get_thread_connection: sess: 01eee642-b27f-1515-9637-b7406fb4f917, name: list_hive_metastore_default, idle: 1.6703541278839111s, acqrelcnt: 1, lang: None, thrd: (68873, 6437613568), cmpt: ``, lut: 1710888478.664839
+[0m19:48:00.335795 [debug] [ThreadPool]: Databricks adapter: conn: 4417679808: idle check connection: sess: 01eee642-b27f-1515-9637-b7406fb4f917, name: list_hive_metastore_default, idle: 1.6708569526672363s, acqrelcnt: 1, lang: None, thrd: (68873, 6437613568), cmpt: ``, lut: 1710888478.664839
+[0m19:48:00.336092 [debug] [ThreadPool]: Using databricks connection "list_hive_metastore_default"
+[0m19:48:00.336440 [debug] [ThreadPool]: On list_hive_metastore_default: /* {"app": "dbt", "dbt_version": "1.7.7", "dbt_databricks_version": "1.7.7", "databricks_sql_connector_version": "2.9.3", "profile_name": "default", "target_name": "dev", "connection_name": "list_hive_metastore_default"} */
+show views in `hive_metastore`.`default`
+  
+[0m19:48:00.908931 [debug] [ThreadPool]: SQL status: OK in 0.5699999928474426 seconds
+[0m19:48:00.915525 [debug] [ThreadPool]: Databricks adapter: conn: 4417679808: _release sess: 01eee642-b27f-1515-9637-b7406fb4f917, name: list_hive_metastore_default, idle: 1.9073486328125e-06s, acqrelcnt: 0, lang: None, thrd: (68873, 6437613568), cmpt: ``, lut: 1710888480.915353
+[0m19:48:00.920595 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'e5fcfc99-1c4e-42cf-81b9-363764cf5392', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1370ba5b0>]}
+[0m19:48:00.921337 [debug] [MainThread]: Databricks adapter: conn: 5218054000: get_thread_connection: sess: None, name: master, idle: 18.390662908554077s, acqrelcnt: 1, lang: None, thrd: (68873, 7965269056), cmpt: ``, lut: 1710888462.530549
+[0m19:48:00.921671 [debug] [MainThread]: Databricks adapter: conn: 5218054000: idle check connection: sess: None, name: master, idle: 18.391032934188843s, acqrelcnt: 1, lang: None, thrd: (68873, 7965269056), cmpt: ``, lut: 1710888462.530549
+[0m19:48:00.921972 [debug] [MainThread]: Databricks adapter: conn: 5218054000: get_thread_connection: sess: None, name: master, idle: 18.391334772109985s, acqrelcnt: 1, lang: None, thrd: (68873, 7965269056), cmpt: ``, lut: 1710888462.530549
+[0m19:48:00.922273 [debug] [MainThread]: Databricks adapter: conn: 5218054000: idle check connection: sess: None, name: master, idle: 18.391636848449707s, acqrelcnt: 1, lang: None, thrd: (68873, 7965269056), cmpt: ``, lut: 1710888462.530549
+[0m19:48:00.922555 [debug] [MainThread]: Spark adapter: NotImplemented: add_begin_query
+[0m19:48:00.922826 [debug] [MainThread]: Spark adapter: NotImplemented: commit
+[0m19:48:00.923119 [debug] [MainThread]: Databricks adapter: conn: 5218054000: _release sess: None, name: master, idle: 1.9073486328125e-06s, acqrelcnt: 0, lang: None, thrd: (68873, 7965269056), cmpt: ``, lut: 1710888480.923031
+[0m19:48:00.923894 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m19:48:00.924210 [info ] [MainThread]: 
+[0m19:48:00.934281 [debug] [Thread-1  ]: Began running node model.default.trusted_rides_km_real
+[0m19:48:00.934819 [info ] [Thread-1  ]: 1 of 1 START sql table model default.trusted_rides_km_real ..................... [RUN]
+[0m19:48:00.935589 [debug] [Thread-1  ]: Databricks adapter: conn: 4417679808: idle check connection: sess: 01eee642-b27f-1515-9637-b7406fb4f917, name: list_hive_metastore_default, idle: 0.02008509635925293s, acqrelcnt: 0, lang: None, thrd: (68873, 6437613568), cmpt: ``, lut: 1710888480.915353
+[0m19:48:00.935886 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly list_hive_metastore_default, now model.default.trusted_rides_km_real)
+[0m19:48:00.936202 [debug] [Thread-1  ]: Databricks adapter: conn: 4417679808: reusing connection list_hive_metastore_default sess: 01eee642-b27f-1515-9637-b7406fb4f917, name: model.default.trusted_rides_km_real, idle: 0.02072596549987793s, acqrelcnt: 0, lang: None, thrd: (68873, 6437613568), cmpt: ``, lut: 1710888480.915353
+[0m19:48:00.936508 [debug] [Thread-1  ]: Databricks adapter: On thread (68873, 6437613568): `hive_metastore`.`default`.`trusted_rides_km_real` using default compute resource.
+[0m19:48:00.936824 [debug] [Thread-1  ]: Databricks adapter: conn: 4417679808: _acquire sess: 01eee642-b27f-1515-9637-b7406fb4f917, name: model.default.trusted_rides_km_real, idle: 0.021348953247070312s, acqrelcnt: 1, lang: sql, thrd: (68873, 6437613568), cmpt: ``, lut: 1710888480.915353
+[0m19:48:00.937125 [debug] [Thread-1  ]: Began compiling node model.default.trusted_rides_km_real
+[0m19:48:00.944901 [debug] [Thread-1  ]: Writing injected SQL for node "model.default.trusted_rides_km_real"
+[0m19:48:00.945790 [debug] [Thread-1  ]: Timing info for model.default.trusted_rides_km_real (compile): 19:48:00.937315 => 19:48:00.945617
+[0m19:48:00.946055 [debug] [Thread-1  ]: Began executing node model.default.trusted_rides_km_real
+[0m19:48:00.956786 [debug] [Thread-1  ]: Databricks adapter: conn: 4417679808: get_thread_connection: sess: 01eee642-b27f-1515-9637-b7406fb4f917, name: model.default.trusted_rides_km_real, idle: 0.04131484031677246s, acqrelcnt: 1, lang: sql, thrd: (68873, 6437613568), cmpt: ``, lut: 1710888480.915353
+[0m19:48:00.957056 [debug] [Thread-1  ]: Databricks adapter: conn: 4417679808: idle check connection: sess: 01eee642-b27f-1515-9637-b7406fb4f917, name: model.default.trusted_rides_km_real, idle: 0.04160594940185547s, acqrelcnt: 1, lang: sql, thrd: (68873, 6437613568), cmpt: ``, lut: 1710888480.915353
+[0m19:48:00.957243 [debug] [Thread-1  ]: Using databricks connection "model.default.trusted_rides_km_real"
+[0m19:48:00.957480 [debug] [Thread-1  ]: On model.default.trusted_rides_km_real: /* {"app": "dbt", "dbt_version": "1.7.7", "dbt_databricks_version": "1.7.7", "databricks_sql_connector_version": "2.9.3", "profile_name": "default", "target_name": "dev", "node_id": "model.default.trusted_rides_km_real"} */
+
+      describe extended `hive_metastore`.`default`.`trusted_rides_km_real`
+  
+[0m19:48:01.782750 [debug] [Thread-1  ]: SQL status: OK in 0.8199999928474426 seconds
+[0m19:48:01.840540 [debug] [Thread-1  ]: Writing runtime sql for node "model.default.trusted_rides_km_real"
+[0m19:48:01.841879 [debug] [Thread-1  ]: Databricks adapter: conn: 4417679808: get_thread_connection: sess: 01eee642-b27f-1515-9637-b7406fb4f917, name: model.default.trusted_rides_km_real, idle: 0.9264037609100342s, acqrelcnt: 1, lang: sql, thrd: (68873, 6437613568), cmpt: ``, lut: 1710888480.915353
+[0m19:48:01.842151 [debug] [Thread-1  ]: Databricks adapter: conn: 4417679808: idle check connection: sess: 01eee642-b27f-1515-9637-b7406fb4f917, name: model.default.trusted_rides_km_real, idle: 0.9266979694366455s, acqrelcnt: 1, lang: sql, thrd: (68873, 6437613568), cmpt: ``, lut: 1710888480.915353
+[0m19:48:01.842345 [debug] [Thread-1  ]: Using databricks connection "model.default.trusted_rides_km_real"
+[0m19:48:01.842604 [debug] [Thread-1  ]: On model.default.trusted_rides_km_real: /* {"app": "dbt", "dbt_version": "1.7.7", "dbt_databricks_version": "1.7.7", "databricks_sql_connector_version": "2.9.3", "profile_name": "default", "target_name": "dev", "node_id": "model.default.trusted_rides_km_real"} */
+
+  
+    
+        create or replace table `hive_metastore`.`default`.`trusted_rides_km_real`
+      
+      
+    using delta
+      
+      
+      
+      
+      
+      
+      
+      as
+      
+
+WITH trusted_transactions_per_cab_type AS (
+    SELECT *
+    FROM `hive_metastore`.`default`.`trusted_transactions_per_cab_type`
+)
+SELECT r.company_type AS company_type,
+       r.cab_type AS cab_type,
+       r.distance_in_miles AS distance_in_miles,
+       0.0 AS distance_in_km,
+       r.price_usd AS price_usd,
+       '' AS price_real_brl
+FROM trusted_transactions_per_cab_type AS r
+  
+[0m19:48:09.789659 [debug] [Thread-1  ]: SQL status: OK in 7.949999809265137 seconds
+[0m19:48:10.097159 [debug] [Thread-1  ]: Timing info for model.default.trusted_rides_km_real (execute): 19:48:00.946215 => 19:48:10.096944
+[0m19:48:10.097636 [debug] [Thread-1  ]: Databricks adapter: conn: 4417679808: _release sess: 01eee642-b27f-1515-9637-b7406fb4f917, name: model.default.trusted_rides_km_real, idle: 5.0067901611328125e-06s, acqrelcnt: 0, lang: sql, thrd: (68873, 6437613568), cmpt: ``, lut: 1710888490.097478
+[0m19:48:10.098386 [debug] [Thread-1  ]: Databricks adapter: conn: 4417679808: _release sess: 01eee642-b27f-1515-9637-b7406fb4f917, name: model.default.trusted_rides_km_real, idle: 1.9073486328125e-06s, acqrelcnt: 0, lang: sql, thrd: (68873, 6437613568), cmpt: ``, lut: 1710888490.098283
+[0m19:48:10.098751 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'e5fcfc99-1c4e-42cf-81b9-363764cf5392', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x137e536a0>]}
+[0m19:48:10.099233 [info ] [Thread-1  ]: 1 of 1 OK created sql table model default.trusted_rides_km_real ................ [[32mOK[0m in 9.16s]
+[0m19:48:10.099606 [debug] [Thread-1  ]: Finished running node model.default.trusted_rides_km_real
+[0m19:48:10.101120 [debug] [MainThread]: Databricks adapter: conn: 5218054000: idle check connection: sess: None, name: master, idle: 9.177963018417358s, acqrelcnt: 0, lang: None, thrd: (68873, 7965269056), cmpt: ``, lut: 1710888480.923031
+[0m19:48:10.101506 [debug] [MainThread]: Databricks adapter: conn: 5218054000: reusing connection master sess: None, name: master, idle: 9.178408861160278s, acqrelcnt: 0, lang: None, thrd: (68873, 7965269056), cmpt: ``, lut: 1710888480.923031
+[0m19:48:10.101708 [debug] [MainThread]: Databricks adapter: Thread (68873, 7965269056) using default compute resource.
+[0m19:48:10.101912 [debug] [MainThread]: Databricks adapter: conn: 5218054000: _acquire sess: None, name: master, idle: 9.178821802139282s, acqrelcnt: 1, lang: None, thrd: (68873, 7965269056), cmpt: ``, lut: 1710888480.923031
+[0m19:48:10.102136 [debug] [MainThread]: Databricks adapter: conn: 5218054000: get_thread_connection: sess: None, name: master, idle: 9.179044723510742s, acqrelcnt: 1, lang: None, thrd: (68873, 7965269056), cmpt: ``, lut: 1710888480.923031
+[0m19:48:10.102335 [debug] [MainThread]: Databricks adapter: conn: 5218054000: idle check connection: sess: None, name: master, idle: 9.17924690246582s, acqrelcnt: 1, lang: None, thrd: (68873, 7965269056), cmpt: ``, lut: 1710888480.923031
+[0m19:48:10.102563 [debug] [MainThread]: On master: ROLLBACK
+[0m19:48:10.102806 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m19:48:10.709677 [debug] [MainThread]: Databricks adapter: conn: 5218054000: session opened sess: 01eee642-c2da-15c4-b54f-1d562016b4c2, name: master, idle: 1.6689300537109375e-05s, acqrelcnt: 1, lang: None, thrd: (68873, 7965269056), cmpt: ``, lut: 1710888490.7090392
+[0m19:48:10.711101 [debug] [MainThread]: Databricks adapter: NotImplemented: rollback
+[0m19:48:10.712193 [debug] [MainThread]: Databricks adapter: conn: 5218054000: get_thread_connection: sess: 01eee642-c2da-15c4-b54f-1d562016b4c2, name: master, idle: 0.002869844436645508s, acqrelcnt: 1, lang: None, thrd: (68873, 7965269056), cmpt: ``, lut: 1710888490.7090392
+[0m19:48:10.713660 [debug] [MainThread]: Databricks adapter: conn: 5218054000: idle check connection: sess: 01eee642-c2da-15c4-b54f-1d562016b4c2, name: master, idle: 0.004263877868652344s, acqrelcnt: 1, lang: None, thrd: (68873, 7965269056), cmpt: ``, lut: 1710888490.7090392
+[0m19:48:10.714650 [debug] [MainThread]: Spark adapter: NotImplemented: add_begin_query
+[0m19:48:10.715483 [debug] [MainThread]: Spark adapter: NotImplemented: commit
+[0m19:48:10.716864 [debug] [MainThread]: Databricks adapter: conn: 5218054000: _release sess: 01eee642-c2da-15c4-b54f-1d562016b4c2, name: master, idle: 5.7220458984375e-06s, acqrelcnt: 0, lang: None, thrd: (68873, 7965269056), cmpt: ``, lut: 1710888490.7165902
+[0m19:48:10.718770 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m19:48:10.719298 [debug] [MainThread]: On master: ROLLBACK
+[0m19:48:10.719741 [debug] [MainThread]: Databricks adapter: NotImplemented: rollback
+[0m19:48:10.720291 [debug] [MainThread]: On master: Close
+[0m19:48:10.885048 [debug] [MainThread]: Connection 'model.default.trusted_rides_km_real' was properly closed.
+[0m19:48:10.885827 [debug] [MainThread]: On model.default.trusted_rides_km_real: ROLLBACK
+[0m19:48:10.886636 [debug] [MainThread]: Databricks adapter: NotImplemented: rollback
+[0m19:48:10.887469 [debug] [MainThread]: On model.default.trusted_rides_km_real: Close
+[0m19:48:11.068920 [info ] [MainThread]: 
+[0m19:48:11.069752 [info ] [MainThread]: Finished running 1 table model in 0 hours 0 minutes and 28.54 seconds (28.54s).
+[0m19:48:11.071319 [debug] [MainThread]: Command end result
+[0m19:48:11.095829 [info ] [MainThread]: 
+[0m19:48:11.096844 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m19:48:11.097405 [info ] [MainThread]: 
+[0m19:48:11.098003 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m19:48:11.136782 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 36.687855, "process_user_time": 4.690575, "process_kernel_time": 4.388096, "process_mem_max_rss": "208338944", "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m19:48:11.138492 [debug] [MainThread]: Command `dbt run` succeeded at 19:48:11.138150 after 36.69 seconds
+[0m19:48:11.140349 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106f18af0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1379f2550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x137052c70>]}
+[0m19:48:11.141075 [debug] [MainThread]: Flushing usage events
+[0m19:56:37.575683 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107848b20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1118a88e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1118ba340>]}
+
+
+============================== 19:56:37.578776 | 0254f21d-ad32-4be4-aaa8-52326643c305 ==============================
+[0m19:56:37.578776 [info ] [MainThread]: Running with dbt=1.7.7
+[0m19:56:37.579028 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/luanmorenomaciel/GitHub/astro-dbt-airflow-dbsql/dags/dbt/databricks', 'debug': 'False', 'version_check': 'True', 'log_path': '/Users/luanmorenomaciel/GitHub/astro-dbt-airflow-dbsql/dags/dbt/databricks/logs', 'fail_fast': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt show --select trusted_rides_km_real.sql', 'introspect': 'True', 'static_parser': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m19:56:38.628152 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '0254f21d-ad32-4be4-aaa8-52326643c305', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11027cac0>]}
+[0m19:56:38.669250 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '0254f21d-ad32-4be4-aaa8-52326643c305', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1118b50d0>]}
+[0m19:56:38.669583 [info ] [MainThread]: Registered adapter: databricks=1.7.7
+[0m19:56:38.685416 [debug] [MainThread]: checksum: 54188551c516f4dd1c42b8d9c289f2bf49f18ae42632e2ba36a64ad29fd60da4, vars: {}, profile: , target: , version: 1.7.7
+[0m19:56:38.743248 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m19:56:38.743617 [debug] [MainThread]: Partial parsing: updated file: default://models/trusted/trusted_rides_km_real.sql
+[0m19:56:38.814033 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '0254f21d-ad32-4be4-aaa8-52326643c305', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x16f1690d0>]}
+[0m19:56:38.823385 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '0254f21d-ad32-4be4-aaa8-52326643c305', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x16b423ac0>]}
+[0m19:56:38.823604 [info ] [MainThread]: Found 7 models, 3 sources, 0 exposures, 0 metrics, 537 macros, 0 groups, 0 semantic models
+[0m19:56:38.823769 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '0254f21d-ad32-4be4-aaa8-52326643c305', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x16b423d00>]}
+[0m19:56:38.824548 [info ] [MainThread]: 
+[0m19:56:38.824950 [debug] [MainThread]: Databricks adapter: conn: 6094469488: Creating DatabricksDBTConnection sess: None, name: master, idle: 0s, acqrelcnt: 0, lang: None, thrd: (70560, 7965269056), cmpt: ``, lut: None
+[0m19:56:38.825103 [debug] [MainThread]: Acquiring new databricks connection 'master'
+[0m19:56:38.825236 [debug] [MainThread]: Databricks adapter: Thread (70560, 7965269056) using default compute resource.
+[0m19:56:38.825372 [debug] [MainThread]: Databricks adapter: conn: 6094469488: _acquire sess: None, name: master, idle: 7.152557373046875e-07s, acqrelcnt: 1, lang: None, thrd: (70560, 7965269056), cmpt: ``, lut: 1710888998.825328
+[0m19:56:38.826009 [debug] [ThreadPool]: Databricks adapter: conn: 6095980720: Creating DatabricksDBTConnection sess: None, name: list_hive_metastore_default, idle: 0s, acqrelcnt: 0, lang: None, thrd: (70560, 6368751616), cmpt: ``, lut: None
+[0m19:56:38.826208 [debug] [ThreadPool]: Acquiring new databricks connection 'list_hive_metastore_default'
+[0m19:56:38.826347 [debug] [ThreadPool]: Databricks adapter: Thread (70560, 6368751616) using default compute resource.
+[0m19:56:38.826487 [debug] [ThreadPool]: Databricks adapter: conn: 6095980720: _acquire sess: None, name: list_hive_metastore_default, idle: 9.5367431640625e-07s, acqrelcnt: 1, lang: None, thrd: (70560, 6368751616), cmpt: ``, lut: 1710888998.8264441
+[0m19:56:38.828736 [debug] [ThreadPool]: Databricks adapter: conn: 6095980720: get_thread_connection: sess: None, name: list_hive_metastore_default, idle: 0.0022430419921875s, acqrelcnt: 1, lang: None, thrd: (70560, 6368751616), cmpt: ``, lut: 1710888998.8264441
+[0m19:56:38.828888 [debug] [ThreadPool]: Databricks adapter: conn: 6095980720: idle check connection: sess: None, name: list_hive_metastore_default, idle: 0.0024030208587646484s, acqrelcnt: 1, lang: None, thrd: (70560, 6368751616), cmpt: ``, lut: 1710888998.8264441
+[0m19:56:38.829069 [debug] [ThreadPool]: Using databricks connection "list_hive_metastore_default"
+[0m19:56:38.829202 [debug] [ThreadPool]: On list_hive_metastore_default: GetTables(database=hive_metastore, schema=default, identifier=None)
+[0m19:56:38.829336 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m19:56:39.453518 [debug] [ThreadPool]: Databricks adapter: conn: 6095980720: session opened sess: 01eee643-f213-127e-b244-788b4c59ff02, name: list_hive_metastore_default, idle: 1.5735626220703125e-05s, acqrelcnt: 1, lang: None, thrd: (70560, 6368751616), cmpt: ``, lut: 1710888999.453057
+[0m19:56:39.894734 [debug] [ThreadPool]: SQL status: OK in 1.0700000524520874 seconds
+[0m19:56:39.911129 [debug] [ThreadPool]: Databricks adapter: conn: 6095980720: get_thread_connection: sess: 01eee643-f213-127e-b244-788b4c59ff02, name: list_hive_metastore_default, idle: 0.45797085762023926s, acqrelcnt: 1, lang: None, thrd: (70560, 6368751616), cmpt: ``, lut: 1710888999.453057
+[0m19:56:39.911437 [debug] [ThreadPool]: Databricks adapter: conn: 6095980720: idle check connection: sess: 01eee643-f213-127e-b244-788b4c59ff02, name: list_hive_metastore_default, idle: 0.45830702781677246s, acqrelcnt: 1, lang: None, thrd: (70560, 6368751616), cmpt: ``, lut: 1710888999.453057
+[0m19:56:39.911672 [debug] [ThreadPool]: Databricks adapter: conn: 6095980720: get_thread_connection: sess: 01eee643-f213-127e-b244-788b4c59ff02, name: list_hive_metastore_default, idle: 0.45854997634887695s, acqrelcnt: 1, lang: None, thrd: (70560, 6368751616), cmpt: ``, lut: 1710888999.453057
+[0m19:56:39.911894 [debug] [ThreadPool]: Databricks adapter: conn: 6095980720: idle check connection: sess: 01eee643-f213-127e-b244-788b4c59ff02, name: list_hive_metastore_default, idle: 0.4587719440460205s, acqrelcnt: 1, lang: None, thrd: (70560, 6368751616), cmpt: ``, lut: 1710888999.453057
+[0m19:56:39.912099 [debug] [ThreadPool]: Spark adapter: NotImplemented: add_begin_query
+[0m19:56:39.912286 [debug] [ThreadPool]: Using databricks connection "list_hive_metastore_default"
+[0m19:56:39.912492 [debug] [ThreadPool]: On list_hive_metastore_default: /* {"app": "dbt", "dbt_version": "1.7.7", "dbt_databricks_version": "1.7.7", "databricks_sql_connector_version": "2.9.3", "profile_name": "default", "target_name": "dev", "connection_name": "list_hive_metastore_default"} */
+
+      select current_catalog()
+  
+[0m19:56:40.193928 [debug] [ThreadPool]: SQL status: OK in 0.2800000011920929 seconds
+[0m19:56:40.203563 [debug] [ThreadPool]: Databricks adapter: conn: 6095980720: get_thread_connection: sess: 01eee643-f213-127e-b244-788b4c59ff02, name: list_hive_metastore_default, idle: 0.7503650188446045s, acqrelcnt: 1, lang: None, thrd: (70560, 6368751616), cmpt: ``, lut: 1710888999.453057
+[0m19:56:40.203976 [debug] [ThreadPool]: Databricks adapter: conn: 6095980720: idle check connection: sess: 01eee643-f213-127e-b244-788b4c59ff02, name: list_hive_metastore_default, idle: 0.7508201599121094s, acqrelcnt: 1, lang: None, thrd: (70560, 6368751616), cmpt: ``, lut: 1710888999.453057
+[0m19:56:40.204267 [debug] [ThreadPool]: Using databricks connection "list_hive_metastore_default"
+[0m19:56:40.204572 [debug] [ThreadPool]: On list_hive_metastore_default: /* {"app": "dbt", "dbt_version": "1.7.7", "dbt_databricks_version": "1.7.7", "databricks_sql_connector_version": "2.9.3", "profile_name": "default", "target_name": "dev", "connection_name": "list_hive_metastore_default"} */
+show views in `hive_metastore`.`default`
+  
+[0m19:56:40.525669 [debug] [ThreadPool]: SQL status: OK in 0.3199999928474426 seconds
+[0m19:56:40.532379 [debug] [ThreadPool]: Databricks adapter: conn: 6095980720: _release sess: 01eee643-f213-127e-b244-788b4c59ff02, name: list_hive_metastore_default, idle: 2.86102294921875e-06s, acqrelcnt: 0, lang: None, thrd: (70560, 6368751616), cmpt: ``, lut: 1710889000.532228
+[0m19:56:40.537089 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '0254f21d-ad32-4be4-aaa8-52326643c305', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x16b423670>]}
+[0m19:56:40.537551 [debug] [MainThread]: Databricks adapter: conn: 6094469488: _release sess: None, name: master, idle: 3.0994415283203125e-06s, acqrelcnt: 0, lang: None, thrd: (70560, 7965269056), cmpt: ``, lut: 1710889000.537447
+[0m19:56:40.538264 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m19:56:40.538575 [info ] [MainThread]: 
+[0m19:56:40.542141 [debug] [Thread-1  ]: Began running node model.default.trusted_rides_km_real
+[0m19:56:40.542917 [debug] [Thread-1  ]: Databricks adapter: conn: 6095980720: idle check connection: sess: 01eee643-f213-127e-b244-788b4c59ff02, name: list_hive_metastore_default, idle: 0.010532855987548828s, acqrelcnt: 0, lang: None, thrd: (70560, 6368751616), cmpt: ``, lut: 1710889000.532228
+[0m19:56:40.543227 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly list_hive_metastore_default, now model.default.trusted_rides_km_real)
+[0m19:56:40.543579 [debug] [Thread-1  ]: Databricks adapter: conn: 6095980720: reusing connection list_hive_metastore_default sess: 01eee643-f213-127e-b244-788b4c59ff02, name: model.default.trusted_rides_km_real, idle: 0.011208057403564453s, acqrelcnt: 0, lang: None, thrd: (70560, 6368751616), cmpt: ``, lut: 1710889000.532228
+[0m19:56:40.543890 [debug] [Thread-1  ]: Databricks adapter: On thread (70560, 6368751616): `hive_metastore`.`default`.`trusted_rides_km_real` using default compute resource.
+[0m19:56:40.544186 [debug] [Thread-1  ]: Databricks adapter: conn: 6095980720: _acquire sess: 01eee643-f213-127e-b244-788b4c59ff02, name: model.default.trusted_rides_km_real, idle: 0.011836051940917969s, acqrelcnt: 1, lang: sql, thrd: (70560, 6368751616), cmpt: ``, lut: 1710889000.532228
+[0m19:56:40.544470 [debug] [Thread-1  ]: Began compiling node model.default.trusted_rides_km_real
+[0m19:56:40.551987 [debug] [Thread-1  ]: Writing injected SQL for node "model.default.trusted_rides_km_real"
+[0m19:56:40.553256 [debug] [Thread-1  ]: Timing info for model.default.trusted_rides_km_real (compile): 19:56:40.544652 => 19:56:40.553084
+[0m19:56:40.553523 [debug] [Thread-1  ]: Began executing node model.default.trusted_rides_km_real
+[0m19:56:40.559398 [debug] [Thread-1  ]: Databricks adapter: conn: 6095980720: get_thread_connection: sess: 01eee643-f213-127e-b244-788b4c59ff02, name: model.default.trusted_rides_km_real, idle: 0.027038097381591797s, acqrelcnt: 1, lang: sql, thrd: (70560, 6368751616), cmpt: ``, lut: 1710889000.532228
+[0m19:56:40.559726 [debug] [Thread-1  ]: Databricks adapter: conn: 6095980720: idle check connection: sess: 01eee643-f213-127e-b244-788b4c59ff02, name: model.default.trusted_rides_km_real, idle: 0.027379989624023438s, acqrelcnt: 1, lang: sql, thrd: (70560, 6368751616), cmpt: ``, lut: 1710889000.532228
+[0m19:56:40.559933 [debug] [Thread-1  ]: Using databricks connection "model.default.trusted_rides_km_real"
+[0m19:56:40.560211 [debug] [Thread-1  ]: On model.default.trusted_rides_km_real: /* {"app": "dbt", "dbt_version": "1.7.7", "dbt_databricks_version": "1.7.7", "databricks_sql_connector_version": "2.9.3", "profile_name": "default", "target_name": "dev", "node_id": "model.default.trusted_rides_km_real"} */
+
+  
+    select *
+    from (
+        
+
+WITH trusted_transactions_per_cab_type AS (
+    SELECT *
+    FROM `hive_metastore`.`default`.`trusted_transactions_per_cab_type`
+)
+SELECT r.company_type AS company_type,
+       r.cab_type AS cab_type,
+       r.distance_in_miles AS distance_in_miles,
+       (r.distance_in_miles * 1.60934) AS distance_in_km,
+       r.price_usd AS price_usd,
+       '' AS price_real_brl
+FROM trusted_transactions_per_cab_type AS r
+    ) as model_limit_subq
+    limit 5
+
+
+[0m19:56:41.239368 [debug] [Thread-1  ]: SQL status: OK in 0.6800000071525574 seconds
+[0m19:56:41.245778 [debug] [Thread-1  ]: Timing info for model.default.trusted_rides_km_real (execute): 19:56:40.553682 => 19:56:41.245375
+[0m19:56:41.246374 [debug] [Thread-1  ]: Databricks adapter: conn: 6095980720: _release sess: 01eee643-f213-127e-b244-788b4c59ff02, name: model.default.trusted_rides_km_real, idle: 7.152557373046875e-06s, acqrelcnt: 0, lang: sql, thrd: (70560, 6368751616), cmpt: ``, lut: 1710889001.246163
+[0m19:56:41.247383 [debug] [Thread-1  ]: Databricks adapter: conn: 6095980720: _release sess: 01eee643-f213-127e-b244-788b4c59ff02, name: model.default.trusted_rides_km_real, idle: 3.0994415283203125e-06s, acqrelcnt: 0, lang: sql, thrd: (70560, 6368751616), cmpt: ``, lut: 1710889001.247191
+[0m19:56:41.248029 [debug] [Thread-1  ]: Finished running node model.default.trusted_rides_km_real
+[0m19:56:41.249014 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m19:56:41.249373 [debug] [MainThread]: Connection 'model.default.trusted_rides_km_real' was properly closed.
+[0m19:56:41.249673 [debug] [MainThread]: On model.default.trusted_rides_km_real: ROLLBACK
+[0m19:56:41.249970 [debug] [MainThread]: Databricks adapter: NotImplemented: rollback
+[0m19:56:41.250249 [debug] [MainThread]: On model.default.trusted_rides_km_real: Close
+[0m19:56:41.409289 [debug] [MainThread]: Command end result
+[0m19:56:41.445207 [info ] [MainThread]: Previewing node 'trusted_rides_km_real':
+| company_type | cab_type | distance_in_miles | distance_in_km | price_usd | price_real_brl |
+| ------------ | -------- | ----------------- | -------------- | --------- | -------------- |
+| Lux          | Lyft     |              0.44 |         0.708… |      11.0 |                |
+| Lyft         | Lyft     |              0.44 |         0.708… |       7.0 |                |
+| Lux Black XL | Lyft     |              0.44 |         0.708… |      26.0 |                |
+| Lyft XL      | Lyft     |              0.44 |         0.708… |       9.0 |                |
+| Lux Black    | Lyft     |              0.44 |         0.708… |      16.5 |                |
+
+[0m19:56:41.449341 [debug] [MainThread]: Resource report: {"command_name": "show", "command_success": true, "command_wall_clock_time": 3.91192, "process_user_time": 2.22706, "process_kernel_time": 3.425861, "process_mem_max_rss": "205520896", "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m19:56:41.449939 [debug] [MainThread]: Command `dbt show` succeeded at 19:56:41.449802 after 3.91 seconds
+[0m19:56:41.450374 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107848b20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x16ce7ae50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x16b58ed90>]}
+[0m19:56:41.450810 [debug] [MainThread]: Flushing usage events
+[0m19:57:10.276783 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1026c9160>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1067754c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1067b82e0>]}
+
+
+============================== 19:57:10.279922 | cb5833fd-435d-4e44-80d5-6b24ea945a05 ==============================
+[0m19:57:10.279922 [info ] [MainThread]: Running with dbt=1.7.7
+[0m19:57:10.280221 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'fail_fast': 'False', 'log_path': '/Users/luanmorenomaciel/GitHub/astro-dbt-airflow-dbsql/dags/dbt/databricks/logs', 'profiles_dir': '/Users/luanmorenomaciel/GitHub/astro-dbt-airflow-dbsql/dags/dbt/databricks', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'invocation_command': 'dbt run --select trusted_rides_km_real.sql', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m19:57:11.276415 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'cb5833fd-435d-4e44-80d5-6b24ea945a05', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1067b8b80>]}
+[0m19:57:11.321447 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'cb5833fd-435d-4e44-80d5-6b24ea945a05', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x16658e8b0>]}
+[0m19:57:11.321798 [info ] [MainThread]: Registered adapter: databricks=1.7.7
+[0m19:57:11.337049 [debug] [MainThread]: checksum: 54188551c516f4dd1c42b8d9c289f2bf49f18ae42632e2ba36a64ad29fd60da4, vars: {}, profile: , target: , version: 1.7.7
+[0m19:57:11.392461 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m19:57:11.392705 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m19:57:11.396451 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'cb5833fd-435d-4e44-80d5-6b24ea945a05', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x169fae0d0>]}
+[0m19:57:11.403149 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'cb5833fd-435d-4e44-80d5-6b24ea945a05', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x169f75d30>]}
+[0m19:57:11.403417 [info ] [MainThread]: Found 7 models, 3 sources, 0 exposures, 0 metrics, 537 macros, 0 groups, 0 semantic models
+[0m19:57:11.403597 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'cb5833fd-435d-4e44-80d5-6b24ea945a05', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x169f75f10>]}
+[0m19:57:11.404428 [info ] [MainThread]: 
+[0m19:57:11.404929 [debug] [MainThread]: Databricks adapter: conn: 6072786080: Creating DatabricksDBTConnection sess: None, name: master, idle: 0s, acqrelcnt: 0, lang: None, thrd: (70612, 7965269056), cmpt: ``, lut: None
+[0m19:57:11.405102 [debug] [MainThread]: Acquiring new databricks connection 'master'
+[0m19:57:11.405251 [debug] [MainThread]: Databricks adapter: Thread (70612, 7965269056) using default compute resource.
+[0m19:57:11.405411 [debug] [MainThread]: Databricks adapter: conn: 6072786080: _acquire sess: None, name: master, idle: 7.152557373046875e-07s, acqrelcnt: 1, lang: None, thrd: (70612, 7965269056), cmpt: ``, lut: 1710889031.4053602
+[0m19:57:11.405990 [debug] [ThreadPool]: Databricks adapter: conn: 6070805936: Creating DatabricksDBTConnection sess: None, name: list_hive_metastore, idle: 0s, acqrelcnt: 0, lang: None, thrd: (70612, 6185332736), cmpt: ``, lut: None
+[0m19:57:11.406186 [debug] [ThreadPool]: Acquiring new databricks connection 'list_hive_metastore'
+[0m19:57:11.406338 [debug] [ThreadPool]: Databricks adapter: Thread (70612, 6185332736) using default compute resource.
+[0m19:57:11.406501 [debug] [ThreadPool]: Databricks adapter: conn: 6070805936: _acquire sess: None, name: list_hive_metastore, idle: 9.5367431640625e-07s, acqrelcnt: 1, lang: None, thrd: (70612, 6185332736), cmpt: ``, lut: 1710889031.406451
+[0m19:57:11.406671 [debug] [ThreadPool]: Databricks adapter: conn: 6070805936: get_thread_connection: sess: None, name: list_hive_metastore, idle: 0.00017309188842773438s, acqrelcnt: 1, lang: None, thrd: (70612, 6185332736), cmpt: ``, lut: 1710889031.406451
+[0m19:57:11.406894 [debug] [ThreadPool]: Databricks adapter: conn: 6070805936: idle check connection: sess: None, name: list_hive_metastore, idle: 0.0003960132598876953s, acqrelcnt: 1, lang: None, thrd: (70612, 6185332736), cmpt: ``, lut: 1710889031.406451
+[0m19:57:11.407033 [debug] [ThreadPool]: Using databricks connection "list_hive_metastore"
+[0m19:57:11.407175 [debug] [ThreadPool]: On list_hive_metastore: GetSchemas(database=hive_metastore, schema=None)
+[0m19:57:11.407306 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m19:57:12.013577 [debug] [ThreadPool]: Databricks adapter: conn: 6070805936: session opened sess: 01eee644-057b-1eaa-87d8-564fc43f1297, name: list_hive_metastore, idle: 1.6927719116210938e-05s, acqrelcnt: 1, lang: None, thrd: (70612, 6185332736), cmpt: ``, lut: 1710889032.013002
+[0m19:57:12.298722 [debug] [ThreadPool]: SQL status: OK in 0.8899999856948853 seconds
+[0m19:57:12.312470 [debug] [ThreadPool]: Databricks adapter: conn: 6070805936: _release sess: 01eee644-057b-1eaa-87d8-564fc43f1297, name: list_hive_metastore, idle: 5.9604644775390625e-06s, acqrelcnt: 0, lang: None, thrd: (70612, 6185332736), cmpt: ``, lut: 1710889032.312287
+[0m19:57:12.314548 [debug] [ThreadPool]: Databricks adapter: conn: 6070805936: idle check connection: sess: 01eee644-057b-1eaa-87d8-564fc43f1297, name: list_hive_metastore, idle: 0.0021469593048095703s, acqrelcnt: 0, lang: None, thrd: (70612, 6185332736), cmpt: ``, lut: 1710889032.312287
+[0m19:57:12.314927 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_hive_metastore, now list_hive_metastore_default)
+[0m19:57:12.315245 [debug] [ThreadPool]: Databricks adapter: conn: 6070805936: reusing connection list_hive_metastore sess: 01eee644-057b-1eaa-87d8-564fc43f1297, name: list_hive_metastore_default, idle: 0.0028657913208007812s, acqrelcnt: 0, lang: None, thrd: (70612, 6185332736), cmpt: ``, lut: 1710889032.312287
+[0m19:57:12.315536 [debug] [ThreadPool]: Databricks adapter: Thread (70612, 6185332736) using default compute resource.
+[0m19:57:12.315820 [debug] [ThreadPool]: Databricks adapter: conn: 6070805936: _acquire sess: 01eee644-057b-1eaa-87d8-564fc43f1297, name: list_hive_metastore_default, idle: 0.003446817398071289s, acqrelcnt: 1, lang: None, thrd: (70612, 6185332736), cmpt: ``, lut: 1710889032.312287
+[0m19:57:12.321242 [debug] [ThreadPool]: Databricks adapter: conn: 6070805936: get_thread_connection: sess: 01eee644-057b-1eaa-87d8-564fc43f1297, name: list_hive_metastore_default, idle: 0.008844852447509766s, acqrelcnt: 1, lang: None, thrd: (70612, 6185332736), cmpt: ``, lut: 1710889032.312287
+[0m19:57:12.321598 [debug] [ThreadPool]: Databricks adapter: conn: 6070805936: idle check connection: sess: 01eee644-057b-1eaa-87d8-564fc43f1297, name: list_hive_metastore_default, idle: 0.009217023849487305s, acqrelcnt: 1, lang: None, thrd: (70612, 6185332736), cmpt: ``, lut: 1710889032.312287
+[0m19:57:12.321891 [debug] [ThreadPool]: Using databricks connection "list_hive_metastore_default"
+[0m19:57:12.322181 [debug] [ThreadPool]: On list_hive_metastore_default: GetTables(database=hive_metastore, schema=default, identifier=None)
+[0m19:57:12.597778 [debug] [ThreadPool]: SQL status: OK in 0.2800000011920929 seconds
+[0m19:57:12.622361 [debug] [ThreadPool]: Databricks adapter: conn: 6070805936: get_thread_connection: sess: 01eee644-057b-1eaa-87d8-564fc43f1297, name: list_hive_metastore_default, idle: 0.3099179267883301s, acqrelcnt: 1, lang: None, thrd: (70612, 6185332736), cmpt: ``, lut: 1710889032.312287
+[0m19:57:12.622806 [debug] [ThreadPool]: Databricks adapter: conn: 6070805936: idle check connection: sess: 01eee644-057b-1eaa-87d8-564fc43f1297, name: list_hive_metastore_default, idle: 0.3104288578033447s, acqrelcnt: 1, lang: None, thrd: (70612, 6185332736), cmpt: ``, lut: 1710889032.312287
+[0m19:57:12.623123 [debug] [ThreadPool]: Databricks adapter: conn: 6070805936: get_thread_connection: sess: 01eee644-057b-1eaa-87d8-564fc43f1297, name: list_hive_metastore_default, idle: 0.31073975563049316s, acqrelcnt: 1, lang: None, thrd: (70612, 6185332736), cmpt: ``, lut: 1710889032.312287
+[0m19:57:12.623422 [debug] [ThreadPool]: Databricks adapter: conn: 6070805936: idle check connection: sess: 01eee644-057b-1eaa-87d8-564fc43f1297, name: list_hive_metastore_default, idle: 0.3110499382019043s, acqrelcnt: 1, lang: None, thrd: (70612, 6185332736), cmpt: ``, lut: 1710889032.312287
+[0m19:57:12.623704 [debug] [ThreadPool]: Spark adapter: NotImplemented: add_begin_query
+[0m19:57:12.623957 [debug] [ThreadPool]: Using databricks connection "list_hive_metastore_default"
+[0m19:57:12.624245 [debug] [ThreadPool]: On list_hive_metastore_default: /* {"app": "dbt", "dbt_version": "1.7.7", "dbt_databricks_version": "1.7.7", "databricks_sql_connector_version": "2.9.3", "profile_name": "default", "target_name": "dev", "connection_name": "list_hive_metastore_default"} */
+
+      select current_catalog()
+  
+[0m19:57:12.893065 [debug] [ThreadPool]: SQL status: OK in 0.27000001072883606 seconds
+[0m19:57:12.910957 [debug] [ThreadPool]: Databricks adapter: conn: 6070805936: get_thread_connection: sess: 01eee644-057b-1eaa-87d8-564fc43f1297, name: list_hive_metastore_default, idle: 0.5983898639678955s, acqrelcnt: 1, lang: None, thrd: (70612, 6185332736), cmpt: ``, lut: 1710889032.312287
+[0m19:57:12.911766 [debug] [ThreadPool]: Databricks adapter: conn: 6070805936: idle check connection: sess: 01eee644-057b-1eaa-87d8-564fc43f1297, name: list_hive_metastore_default, idle: 0.5993468761444092s, acqrelcnt: 1, lang: None, thrd: (70612, 6185332736), cmpt: ``, lut: 1710889032.312287
+[0m19:57:12.912265 [debug] [ThreadPool]: Using databricks connection "list_hive_metastore_default"
+[0m19:57:12.912718 [debug] [ThreadPool]: On list_hive_metastore_default: /* {"app": "dbt", "dbt_version": "1.7.7", "dbt_databricks_version": "1.7.7", "databricks_sql_connector_version": "2.9.3", "profile_name": "default", "target_name": "dev", "connection_name": "list_hive_metastore_default"} */
+show views in `hive_metastore`.`default`
+  
+[0m19:57:13.225864 [debug] [ThreadPool]: SQL status: OK in 0.3100000023841858 seconds
+[0m19:57:13.232927 [debug] [ThreadPool]: Databricks adapter: conn: 6070805936: _release sess: 01eee644-057b-1eaa-87d8-564fc43f1297, name: list_hive_metastore_default, idle: 9.059906005859375e-06s, acqrelcnt: 0, lang: None, thrd: (70612, 6185332736), cmpt: ``, lut: 1710889033.232704
+[0m19:57:13.240111 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'cb5833fd-435d-4e44-80d5-6b24ea945a05', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x169d123a0>]}
+[0m19:57:13.240954 [debug] [MainThread]: Databricks adapter: conn: 6072786080: get_thread_connection: sess: None, name: master, idle: 1.8354177474975586s, acqrelcnt: 1, lang: None, thrd: (70612, 7965269056), cmpt: ``, lut: 1710889031.4053602
+[0m19:57:13.241504 [debug] [MainThread]: Databricks adapter: conn: 6072786080: idle check connection: sess: None, name: master, idle: 1.8360388278961182s, acqrelcnt: 1, lang: None, thrd: (70612, 7965269056), cmpt: ``, lut: 1710889031.4053602
+[0m19:57:13.241833 [debug] [MainThread]: Databricks adapter: conn: 6072786080: get_thread_connection: sess: None, name: master, idle: 1.8363828659057617s, acqrelcnt: 1, lang: None, thrd: (70612, 7965269056), cmpt: ``, lut: 1710889031.4053602
+[0m19:57:13.242176 [debug] [MainThread]: Databricks adapter: conn: 6072786080: idle check connection: sess: None, name: master, idle: 1.8367035388946533s, acqrelcnt: 1, lang: None, thrd: (70612, 7965269056), cmpt: ``, lut: 1710889031.4053602
+[0m19:57:13.242600 [debug] [MainThread]: Spark adapter: NotImplemented: add_begin_query
+[0m19:57:13.242934 [debug] [MainThread]: Spark adapter: NotImplemented: commit
+[0m19:57:13.243307 [debug] [MainThread]: Databricks adapter: conn: 6072786080: _release sess: None, name: master, idle: 3.0994415283203125e-06s, acqrelcnt: 0, lang: None, thrd: (70612, 7965269056), cmpt: ``, lut: 1710889033.243197
+[0m19:57:13.244468 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m19:57:13.245048 [info ] [MainThread]: 
+[0m19:57:13.250042 [debug] [Thread-1  ]: Began running node model.default.trusted_rides_km_real
+[0m19:57:13.251063 [info ] [Thread-1  ]: 1 of 1 START sql table model default.trusted_rides_km_real ..................... [RUN]
+[0m19:57:13.252459 [debug] [Thread-1  ]: Databricks adapter: conn: 6070805936: idle check connection: sess: 01eee644-057b-1eaa-87d8-564fc43f1297, name: list_hive_metastore_default, idle: 0.019529104232788086s, acqrelcnt: 0, lang: None, thrd: (70612, 6185332736), cmpt: ``, lut: 1710889033.232704
+[0m19:57:13.253670 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly list_hive_metastore_default, now model.default.trusted_rides_km_real)
+[0m19:57:13.254208 [debug] [Thread-1  ]: Databricks adapter: conn: 6070805936: reusing connection list_hive_metastore_default sess: 01eee644-057b-1eaa-87d8-564fc43f1297, name: model.default.trusted_rides_km_real, idle: 0.021293163299560547s, acqrelcnt: 0, lang: None, thrd: (70612, 6185332736), cmpt: ``, lut: 1710889033.232704
+[0m19:57:13.254654 [debug] [Thread-1  ]: Databricks adapter: On thread (70612, 6185332736): `hive_metastore`.`default`.`trusted_rides_km_real` using default compute resource.
+[0m19:57:13.255104 [debug] [Thread-1  ]: Databricks adapter: conn: 6070805936: _acquire sess: 01eee644-057b-1eaa-87d8-564fc43f1297, name: model.default.trusted_rides_km_real, idle: 0.022233247756958008s, acqrelcnt: 1, lang: sql, thrd: (70612, 6185332736), cmpt: ``, lut: 1710889033.232704
+[0m19:57:13.255519 [debug] [Thread-1  ]: Began compiling node model.default.trusted_rides_km_real
+[0m19:57:13.264681 [debug] [Thread-1  ]: Writing injected SQL for node "model.default.trusted_rides_km_real"
+[0m19:57:13.266029 [debug] [Thread-1  ]: Timing info for model.default.trusted_rides_km_real (compile): 19:57:13.255770 => 19:57:13.265721
+[0m19:57:13.266450 [debug] [Thread-1  ]: Began executing node model.default.trusted_rides_km_real
+[0m19:57:13.281418 [debug] [Thread-1  ]: Databricks adapter: conn: 6070805936: get_thread_connection: sess: 01eee644-057b-1eaa-87d8-564fc43f1297, name: model.default.trusted_rides_km_real, idle: 0.04857516288757324s, acqrelcnt: 1, lang: sql, thrd: (70612, 6185332736), cmpt: ``, lut: 1710889033.232704
+[0m19:57:13.281752 [debug] [Thread-1  ]: Databricks adapter: conn: 6070805936: idle check connection: sess: 01eee644-057b-1eaa-87d8-564fc43f1297, name: model.default.trusted_rides_km_real, idle: 0.04893803596496582s, acqrelcnt: 1, lang: sql, thrd: (70612, 6185332736), cmpt: ``, lut: 1710889033.232704
+[0m19:57:13.281974 [debug] [Thread-1  ]: Using databricks connection "model.default.trusted_rides_km_real"
+[0m19:57:13.282242 [debug] [Thread-1  ]: On model.default.trusted_rides_km_real: /* {"app": "dbt", "dbt_version": "1.7.7", "dbt_databricks_version": "1.7.7", "databricks_sql_connector_version": "2.9.3", "profile_name": "default", "target_name": "dev", "node_id": "model.default.trusted_rides_km_real"} */
+
+      describe extended `hive_metastore`.`default`.`trusted_rides_km_real`
+  
+[0m19:57:13.642355 [debug] [Thread-1  ]: SQL status: OK in 0.36000001430511475 seconds
+[0m19:57:13.698405 [debug] [Thread-1  ]: Writing runtime sql for node "model.default.trusted_rides_km_real"
+[0m19:57:13.699839 [debug] [Thread-1  ]: Databricks adapter: conn: 6070805936: get_thread_connection: sess: 01eee644-057b-1eaa-87d8-564fc43f1297, name: model.default.trusted_rides_km_real, idle: 0.46701693534851074s, acqrelcnt: 1, lang: sql, thrd: (70612, 6185332736), cmpt: ``, lut: 1710889033.232704
+[0m19:57:13.700108 [debug] [Thread-1  ]: Databricks adapter: conn: 6070805936: idle check connection: sess: 01eee644-057b-1eaa-87d8-564fc43f1297, name: model.default.trusted_rides_km_real, idle: 0.46730494499206543s, acqrelcnt: 1, lang: sql, thrd: (70612, 6185332736), cmpt: ``, lut: 1710889033.232704
+[0m19:57:13.700302 [debug] [Thread-1  ]: Using databricks connection "model.default.trusted_rides_km_real"
+[0m19:57:13.700570 [debug] [Thread-1  ]: On model.default.trusted_rides_km_real: /* {"app": "dbt", "dbt_version": "1.7.7", "dbt_databricks_version": "1.7.7", "databricks_sql_connector_version": "2.9.3", "profile_name": "default", "target_name": "dev", "node_id": "model.default.trusted_rides_km_real"} */
+
+  
+    
+        create or replace table `hive_metastore`.`default`.`trusted_rides_km_real`
+      
+      
+    using delta
+      
+      
+      
+      
+      
+      
+      
+      as
+      
+
+WITH trusted_transactions_per_cab_type AS (
+    SELECT *
+    FROM `hive_metastore`.`default`.`trusted_transactions_per_cab_type`
+)
+SELECT r.company_type AS company_type,
+       r.cab_type AS cab_type,
+       r.distance_in_miles AS distance_in_miles,
+       (r.distance_in_miles * 1.60934) AS distance_in_km,
+       r.price_usd AS price_usd,
+       '' AS price_real_brl
+FROM trusted_transactions_per_cab_type AS r
+  
+[0m19:57:16.131364 [debug] [Thread-1  ]: SQL status: OK in 2.430000066757202 seconds
+[0m19:57:16.171049 [debug] [Thread-1  ]: Timing info for model.default.trusted_rides_km_real (execute): 19:57:13.266677 => 19:57:16.170813
+[0m19:57:16.171603 [debug] [Thread-1  ]: Databricks adapter: conn: 6070805936: _release sess: 01eee644-057b-1eaa-87d8-564fc43f1297, name: model.default.trusted_rides_km_real, idle: 5.9604644775390625e-06s, acqrelcnt: 0, lang: sql, thrd: (70612, 6185332736), cmpt: ``, lut: 1710889036.171411
+[0m19:57:16.172332 [debug] [Thread-1  ]: Databricks adapter: conn: 6070805936: _release sess: 01eee644-057b-1eaa-87d8-564fc43f1297, name: model.default.trusted_rides_km_real, idle: 1.9073486328125e-06s, acqrelcnt: 0, lang: sql, thrd: (70612, 6185332736), cmpt: ``, lut: 1710889036.172213
+[0m19:57:16.172756 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'cb5833fd-435d-4e44-80d5-6b24ea945a05', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x16a984be0>]}
+[0m19:57:16.173368 [info ] [Thread-1  ]: 1 of 1 OK created sql table model default.trusted_rides_km_real ................ [[32mOK[0m in 2.92s]
+[0m19:57:16.173874 [debug] [Thread-1  ]: Finished running node model.default.trusted_rides_km_real
+[0m19:57:16.175579 [debug] [MainThread]: Databricks adapter: conn: 6072786080: idle check connection: sess: None, name: master, idle: 2.9322240352630615s, acqrelcnt: 0, lang: None, thrd: (70612, 7965269056), cmpt: ``, lut: 1710889033.243197
+[0m19:57:16.176060 [debug] [MainThread]: Databricks adapter: conn: 6072786080: reusing connection master sess: None, name: master, idle: 2.932770013809204s, acqrelcnt: 0, lang: None, thrd: (70612, 7965269056), cmpt: ``, lut: 1710889033.243197
+[0m19:57:16.176342 [debug] [MainThread]: Databricks adapter: Thread (70612, 7965269056) using default compute resource.
+[0m19:57:16.176604 [debug] [MainThread]: Databricks adapter: conn: 6072786080: _acquire sess: None, name: master, idle: 2.9333319664001465s, acqrelcnt: 1, lang: None, thrd: (70612, 7965269056), cmpt: ``, lut: 1710889033.243197
+[0m19:57:16.176886 [debug] [MainThread]: Databricks adapter: conn: 6072786080: get_thread_connection: sess: None, name: master, idle: 2.9336090087890625s, acqrelcnt: 1, lang: None, thrd: (70612, 7965269056), cmpt: ``, lut: 1710889033.243197
+[0m19:57:16.177143 [debug] [MainThread]: Databricks adapter: conn: 6072786080: idle check connection: sess: None, name: master, idle: 2.933873176574707s, acqrelcnt: 1, lang: None, thrd: (70612, 7965269056), cmpt: ``, lut: 1710889033.243197
+[0m19:57:16.177398 [debug] [MainThread]: On master: ROLLBACK
+[0m19:57:16.177642 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m19:57:16.764014 [debug] [MainThread]: Databricks adapter: conn: 6072786080: session opened sess: 01eee644-0853-17a8-94e6-6f2b82b92eb6, name: master, idle: 1.9073486328125e-05s, acqrelcnt: 1, lang: None, thrd: (70612, 7965269056), cmpt: ``, lut: 1710889036.763356
+[0m19:57:16.765909 [debug] [MainThread]: Databricks adapter: NotImplemented: rollback
+[0m19:57:16.767013 [debug] [MainThread]: Databricks adapter: conn: 6072786080: get_thread_connection: sess: 01eee644-0853-17a8-94e6-6f2b82b92eb6, name: master, idle: 0.0033729076385498047s, acqrelcnt: 1, lang: None, thrd: (70612, 7965269056), cmpt: ``, lut: 1710889036.763356
+[0m19:57:16.768037 [debug] [MainThread]: Databricks adapter: conn: 6072786080: idle check connection: sess: 01eee644-0853-17a8-94e6-6f2b82b92eb6, name: master, idle: 0.004414796829223633s, acqrelcnt: 1, lang: None, thrd: (70612, 7965269056), cmpt: ``, lut: 1710889036.763356
+[0m19:57:16.769658 [debug] [MainThread]: Spark adapter: NotImplemented: add_begin_query
+[0m19:57:16.770731 [debug] [MainThread]: Spark adapter: NotImplemented: commit
+[0m19:57:16.771626 [debug] [MainThread]: Databricks adapter: conn: 6072786080: _release sess: 01eee644-0853-17a8-94e6-6f2b82b92eb6, name: master, idle: 5.9604644775390625e-06s, acqrelcnt: 0, lang: None, thrd: (70612, 7965269056), cmpt: ``, lut: 1710889036.771395
+[0m19:57:16.773795 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m19:57:16.774399 [debug] [MainThread]: On master: ROLLBACK
+[0m19:57:16.775151 [debug] [MainThread]: Databricks adapter: NotImplemented: rollback
+[0m19:57:16.775804 [debug] [MainThread]: On master: Close
+[0m19:57:16.946336 [debug] [MainThread]: Connection 'model.default.trusted_rides_km_real' was properly closed.
+[0m19:57:16.947408 [debug] [MainThread]: On model.default.trusted_rides_km_real: ROLLBACK
+[0m19:57:16.948379 [debug] [MainThread]: Databricks adapter: NotImplemented: rollback
+[0m19:57:16.949269 [debug] [MainThread]: On model.default.trusted_rides_km_real: Close
+[0m19:57:17.113645 [info ] [MainThread]: 
+[0m19:57:17.115068 [info ] [MainThread]: Finished running 1 table model in 0 hours 0 minutes and 5.71 seconds (5.71s).
+[0m19:57:17.117149 [debug] [MainThread]: Command end result
+[0m19:57:17.155414 [info ] [MainThread]: 
+[0m19:57:17.156601 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m19:57:17.157572 [info ] [MainThread]: 
+[0m19:57:17.158410 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m19:57:17.163293 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 6.923192, "process_user_time": 2.35049, "process_kernel_time": 3.415758, "process_mem_max_rss": "205078528", "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m19:57:17.164145 [debug] [MainThread]: Command `dbt run` succeeded at 19:57:17.163987 after 6.92 seconds
+[0m19:57:17.164779 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1026c9160>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x16a952910>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x169f9c820>]}
+[0m19:57:17.165771 [debug] [MainThread]: Flushing usage events
+[0m20:50:23.599250 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1050c5160>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x121d74520>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x121db60a0>]}
+
+
+============================== 20:50:23.602468 | 6293452c-cb45-4179-8426-f195c16593d9 ==============================
+[0m20:50:23.602468 [info ] [MainThread]: Running with dbt=1.7.7
+[0m20:50:23.602746 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'version_check': 'True', 'log_path': '/Users/luanmorenomaciel/GitHub/astro-dbt-airflow-dbsql/dags/dbt/databricks/logs', 'profiles_dir': '/Users/luanmorenomaciel/GitHub/astro-dbt-airflow-dbsql/dags/dbt/databricks', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'static_parser': 'True', 'log_format': 'default', 'target_path': 'None', 'invocation_command': 'dbt show --select trusted_rides_km_real.sql', 'send_anonymous_usage_stats': 'True'}
+[0m20:50:24.710367 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '6293452c-cb45-4179-8426-f195c16593d9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x121db6eb0>]}
+[0m20:50:24.753661 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '6293452c-cb45-4179-8426-f195c16593d9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x16a4f46a0>]}
+[0m20:50:24.754018 [info ] [MainThread]: Registered adapter: databricks=1.7.7
+[0m20:50:24.769888 [debug] [MainThread]: checksum: 54188551c516f4dd1c42b8d9c289f2bf49f18ae42632e2ba36a64ad29fd60da4, vars: {}, profile: , target: , version: 1.7.7
+[0m20:50:24.827293 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m20:50:24.827559 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m20:50:24.831570 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '6293452c-cb45-4179-8426-f195c16593d9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x16a8ef0d0>]}
+[0m20:50:24.840441 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '6293452c-cb45-4179-8426-f195c16593d9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x16a8b8dc0>]}
+[0m20:50:24.840709 [info ] [MainThread]: Found 7 models, 3 sources, 0 exposures, 0 metrics, 537 macros, 0 groups, 0 semantic models
+[0m20:50:24.840893 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '6293452c-cb45-4179-8426-f195c16593d9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x16a8b8fd0>]}
+[0m20:50:24.841696 [info ] [MainThread]: 
+[0m20:50:24.842129 [debug] [MainThread]: Databricks adapter: conn: 6082497456: Creating DatabricksDBTConnection sess: None, name: master, idle: 0s, acqrelcnt: 0, lang: None, thrd: (72921, 7965269056), cmpt: ``, lut: None
+[0m20:50:24.842278 [debug] [MainThread]: Acquiring new databricks connection 'master'
+[0m20:50:24.842410 [debug] [MainThread]: Databricks adapter: Thread (72921, 7965269056) using default compute resource.
+[0m20:50:24.842553 [debug] [MainThread]: Databricks adapter: conn: 6082497456: _acquire sess: None, name: master, idle: 2.1457672119140625e-06s, acqrelcnt: 1, lang: None, thrd: (72921, 7965269056), cmpt: ``, lut: 1710892224.842505
+[0m20:50:24.843277 [debug] [ThreadPool]: Databricks adapter: conn: 6079178544: Creating DatabricksDBTConnection sess: None, name: list_hive_metastore_default, idle: 0s, acqrelcnt: 0, lang: None, thrd: (72921, 6140227584), cmpt: ``, lut: None
+[0m20:50:24.843501 [debug] [ThreadPool]: Acquiring new databricks connection 'list_hive_metastore_default'
+[0m20:50:24.843668 [debug] [ThreadPool]: Databricks adapter: Thread (72921, 6140227584) using default compute resource.
+[0m20:50:24.843821 [debug] [ThreadPool]: Databricks adapter: conn: 6079178544: _acquire sess: None, name: list_hive_metastore_default, idle: 9.5367431640625e-07s, acqrelcnt: 1, lang: None, thrd: (72921, 6140227584), cmpt: ``, lut: 1710892224.843776
+[0m20:50:24.846589 [debug] [ThreadPool]: Databricks adapter: conn: 6079178544: get_thread_connection: sess: None, name: list_hive_metastore_default, idle: 0.0027577877044677734s, acqrelcnt: 1, lang: None, thrd: (72921, 6140227584), cmpt: ``, lut: 1710892224.843776
+[0m20:50:24.846760 [debug] [ThreadPool]: Databricks adapter: conn: 6079178544: idle check connection: sess: None, name: list_hive_metastore_default, idle: 0.002939939498901367s, acqrelcnt: 1, lang: None, thrd: (72921, 6140227584), cmpt: ``, lut: 1710892224.843776
+[0m20:50:24.846903 [debug] [ThreadPool]: Using databricks connection "list_hive_metastore_default"
+[0m20:50:24.847047 [debug] [ThreadPool]: On list_hive_metastore_default: GetTables(database=hive_metastore, schema=default, identifier=None)
+[0m20:50:24.847188 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:50:25.704794 [debug] [ThreadPool]: Databricks adapter: conn: 6079178544: session opened sess: 01eee64b-7505-1102-92fe-6196f1c7593e, name: list_hive_metastore_default, idle: 1.9788742065429688e-05s, acqrelcnt: 1, lang: None, thrd: (72921, 6140227584), cmpt: ``, lut: 1710892225.7043462
+[0m20:50:35.686396 [debug] [ThreadPool]: SQL status: OK in 10.84000015258789 seconds
+[0m20:50:35.707257 [debug] [ThreadPool]: Databricks adapter: conn: 6079178544: get_thread_connection: sess: 01eee64b-7505-1102-92fe-6196f1c7593e, name: list_hive_metastore_default, idle: 10.002701759338379s, acqrelcnt: 1, lang: None, thrd: (72921, 6140227584), cmpt: ``, lut: 1710892225.7043462
+[0m20:50:35.707832 [debug] [ThreadPool]: Databricks adapter: conn: 6079178544: idle check connection: sess: 01eee64b-7505-1102-92fe-6196f1c7593e, name: list_hive_metastore_default, idle: 10.003355741500854s, acqrelcnt: 1, lang: None, thrd: (72921, 6140227584), cmpt: ``, lut: 1710892225.7043462
+[0m20:50:35.708145 [debug] [ThreadPool]: Databricks adapter: conn: 6079178544: get_thread_connection: sess: 01eee64b-7505-1102-92fe-6196f1c7593e, name: list_hive_metastore_default, idle: 10.003728866577148s, acqrelcnt: 1, lang: None, thrd: (72921, 6140227584), cmpt: ``, lut: 1710892225.7043462
+[0m20:50:35.708386 [debug] [ThreadPool]: Databricks adapter: conn: 6079178544: idle check connection: sess: 01eee64b-7505-1102-92fe-6196f1c7593e, name: list_hive_metastore_default, idle: 10.003978967666626s, acqrelcnt: 1, lang: None, thrd: (72921, 6140227584), cmpt: ``, lut: 1710892225.7043462
+[0m20:50:35.708590 [debug] [ThreadPool]: Spark adapter: NotImplemented: add_begin_query
+[0m20:50:35.708784 [debug] [ThreadPool]: Using databricks connection "list_hive_metastore_default"
+[0m20:50:35.709004 [debug] [ThreadPool]: On list_hive_metastore_default: /* {"app": "dbt", "dbt_version": "1.7.7", "dbt_databricks_version": "1.7.7", "databricks_sql_connector_version": "2.9.3", "profile_name": "default", "target_name": "dev", "connection_name": "list_hive_metastore_default"} */
+
+      select current_catalog()
+  
+[0m20:50:36.831463 [debug] [ThreadPool]: SQL status: OK in 1.1200000047683716 seconds
+[0m20:50:36.839542 [debug] [ThreadPool]: Databricks adapter: conn: 6079178544: get_thread_connection: sess: 01eee64b-7505-1102-92fe-6196f1c7593e, name: list_hive_metastore_default, idle: 11.135044813156128s, acqrelcnt: 1, lang: None, thrd: (72921, 6140227584), cmpt: ``, lut: 1710892225.7043462
+[0m20:50:36.840102 [debug] [ThreadPool]: Databricks adapter: conn: 6079178544: idle check connection: sess: 01eee64b-7505-1102-92fe-6196f1c7593e, name: list_hive_metastore_default, idle: 11.135660648345947s, acqrelcnt: 1, lang: None, thrd: (72921, 6140227584), cmpt: ``, lut: 1710892225.7043462
+[0m20:50:36.840371 [debug] [ThreadPool]: Using databricks connection "list_hive_metastore_default"
+[0m20:50:36.840593 [debug] [ThreadPool]: On list_hive_metastore_default: /* {"app": "dbt", "dbt_version": "1.7.7", "dbt_databricks_version": "1.7.7", "databricks_sql_connector_version": "2.9.3", "profile_name": "default", "target_name": "dev", "connection_name": "list_hive_metastore_default"} */
+show views in `hive_metastore`.`default`
+  
+[0m20:50:37.362448 [debug] [ThreadPool]: SQL status: OK in 0.5199999809265137 seconds
+[0m20:50:37.369696 [debug] [ThreadPool]: Databricks adapter: conn: 6079178544: _release sess: 01eee64b-7505-1102-92fe-6196f1c7593e, name: list_hive_metastore_default, idle: 5.0067901611328125e-06s, acqrelcnt: 0, lang: None, thrd: (72921, 6140227584), cmpt: ``, lut: 1710892237.3695
+[0m20:50:37.374516 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '6293452c-cb45-4179-8426-f195c16593d9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x16a55b670>]}
+[0m20:50:37.375012 [debug] [MainThread]: Databricks adapter: conn: 6082497456: _release sess: None, name: master, idle: 4.291534423828125e-06s, acqrelcnt: 0, lang: None, thrd: (72921, 7965269056), cmpt: ``, lut: 1710892237.3749068
+[0m20:50:37.375714 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m20:50:37.376036 [info ] [MainThread]: 
+[0m20:50:37.381550 [debug] [Thread-1  ]: Began running node model.default.trusted_rides_km_real
+[0m20:50:37.383034 [debug] [Thread-1  ]: Databricks adapter: conn: 6079178544: idle check connection: sess: 01eee64b-7505-1102-92fe-6196f1c7593e, name: list_hive_metastore_default, idle: 0.013135194778442383s, acqrelcnt: 0, lang: None, thrd: (72921, 6140227584), cmpt: ``, lut: 1710892237.3695
+[0m20:50:37.383372 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly list_hive_metastore_default, now model.default.trusted_rides_km_real)
+[0m20:50:37.383720 [debug] [Thread-1  ]: Databricks adapter: conn: 6079178544: reusing connection list_hive_metastore_default sess: 01eee64b-7505-1102-92fe-6196f1c7593e, name: model.default.trusted_rides_km_real, idle: 0.014088153839111328s, acqrelcnt: 0, lang: None, thrd: (72921, 6140227584), cmpt: ``, lut: 1710892237.3695
+[0m20:50:37.384047 [debug] [Thread-1  ]: Databricks adapter: On thread (72921, 6140227584): `hive_metastore`.`default`.`trusted_rides_km_real` using default compute resource.
+[0m20:50:37.384373 [debug] [Thread-1  ]: Databricks adapter: conn: 6079178544: _acquire sess: 01eee64b-7505-1102-92fe-6196f1c7593e, name: model.default.trusted_rides_km_real, idle: 0.014744997024536133s, acqrelcnt: 1, lang: sql, thrd: (72921, 6140227584), cmpt: ``, lut: 1710892237.3695
+[0m20:50:37.384698 [debug] [Thread-1  ]: Began compiling node model.default.trusted_rides_km_real
+[0m20:50:37.393063 [debug] [Thread-1  ]: Writing injected SQL for node "model.default.trusted_rides_km_real"
+[0m20:50:37.395914 [debug] [Thread-1  ]: Timing info for model.default.trusted_rides_km_real (compile): 20:50:37.384907 => 20:50:37.395661
+[0m20:50:37.396224 [debug] [Thread-1  ]: Began executing node model.default.trusted_rides_km_real
+[0m20:50:37.403983 [debug] [Thread-1  ]: Databricks adapter: conn: 6079178544: get_thread_connection: sess: 01eee64b-7505-1102-92fe-6196f1c7593e, name: model.default.trusted_rides_km_real, idle: 0.03432106971740723s, acqrelcnt: 1, lang: sql, thrd: (72921, 6140227584), cmpt: ``, lut: 1710892237.3695
+[0m20:50:37.404348 [debug] [Thread-1  ]: Databricks adapter: conn: 6079178544: idle check connection: sess: 01eee64b-7505-1102-92fe-6196f1c7593e, name: model.default.trusted_rides_km_real, idle: 0.03474307060241699s, acqrelcnt: 1, lang: sql, thrd: (72921, 6140227584), cmpt: ``, lut: 1710892237.3695
+[0m20:50:37.404593 [debug] [Thread-1  ]: Using databricks connection "model.default.trusted_rides_km_real"
+[0m20:50:37.404902 [debug] [Thread-1  ]: On model.default.trusted_rides_km_real: /* {"app": "dbt", "dbt_version": "1.7.7", "dbt_databricks_version": "1.7.7", "databricks_sql_connector_version": "2.9.3", "profile_name": "default", "target_name": "dev", "node_id": "model.default.trusted_rides_km_real"} */
+
+  
+    select *
+    from (
+        
+
+WITH trusted_transactions_per_cab_type AS (
+    SELECT *
+    FROM `hive_metastore`.`default`.`trusted_transactions_per_cab_type`
+)
+SELECT r.company_type AS company_type,
+       r.cab_type AS cab_type,
+       r.distance_in_miles AS distance_in_miles,
+       (r.distance_in_miles * 1.60934) AS distance_in_km,
+       r.price_usd AS price_usd,
+       '' AS price_real_brl
+FROM trusted_transactions_per_cab_type AS r
+    ) as model_limit_subq
+    limit 5
+
+
+[0m20:50:38.863051 [debug] [Thread-1  ]: SQL status: OK in 1.4600000381469727 seconds
+[0m20:50:38.869332 [debug] [Thread-1  ]: Timing info for model.default.trusted_rides_km_real (execute): 20:50:37.396390 => 20:50:38.868900
+[0m20:50:38.870050 [debug] [Thread-1  ]: Databricks adapter: conn: 6079178544: _release sess: 01eee64b-7505-1102-92fe-6196f1c7593e, name: model.default.trusted_rides_km_real, idle: 6.198883056640625e-06s, acqrelcnt: 0, lang: sql, thrd: (72921, 6140227584), cmpt: ``, lut: 1710892238.8698199
+[0m20:50:38.870945 [debug] [Thread-1  ]: Databricks adapter: conn: 6079178544: _release sess: 01eee64b-7505-1102-92fe-6196f1c7593e, name: model.default.trusted_rides_km_real, idle: 9.5367431640625e-07s, acqrelcnt: 0, lang: sql, thrd: (72921, 6140227584), cmpt: ``, lut: 1710892238.870825
+[0m20:50:38.871575 [debug] [Thread-1  ]: Finished running node model.default.trusted_rides_km_real
+[0m20:50:38.872999 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m20:50:38.873346 [debug] [MainThread]: Connection 'model.default.trusted_rides_km_real' was properly closed.
+[0m20:50:38.873617 [debug] [MainThread]: On model.default.trusted_rides_km_real: ROLLBACK
+[0m20:50:38.873854 [debug] [MainThread]: Databricks adapter: NotImplemented: rollback
+[0m20:50:38.874078 [debug] [MainThread]: On model.default.trusted_rides_km_real: Close
+[0m20:50:39.066002 [debug] [MainThread]: Command end result
+[0m20:50:39.097223 [info ] [MainThread]: Previewing node 'trusted_rides_km_real':
+| company_type | cab_type | distance_in_miles | distance_in_km | price_usd | price_real_brl |
+| ------------ | -------- | ----------------- | -------------- | --------- | -------------- |
+| Lux          | Lyft     |              0.44 |         0.708… |      11.0 |                |
+| Lyft         | Lyft     |              0.44 |         0.708… |       7.0 |                |
+| Lux Black XL | Lyft     |              0.44 |         0.708… |      26.0 |                |
+| Lyft XL      | Lyft     |              0.44 |         0.708… |       9.0 |                |
+| Lux Black    | Lyft     |              0.44 |         0.708… |      16.5 |                |
+
+[0m20:50:39.100639 [debug] [MainThread]: Resource report: {"command_name": "show", "command_success": true, "command_wall_clock_time": 15.545344, "process_user_time": 2.312591, "process_kernel_time": 3.141042, "process_mem_max_rss": "200818688", "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m20:50:39.101102 [debug] [MainThread]: Command `dbt show` succeeded at 20:50:39.101008 after 15.55 seconds
+[0m20:50:39.101444 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1050c5160>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x16a96efd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x121db6eb0>]}
+[0m20:50:39.101752 [debug] [MainThread]: Flushing usage events

@@ -9,8 +9,7 @@ select id AS id,
        cab_type AS cab_type,
        source AS source,
        destination AS destination,
-       distance AS distance_in_miles,
+       CAST(distance AS FLOAT) AS distance_in_miles,
        price AS price_in_dollars,
        surge_multiplier AS dynamic_fare
-       
 from {{ source('default', 'rides') }}
